@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>DF Instalacije | Studio – Katalog, potrošni materijal i troškovnik</title>
+<title>DF Instalacije | Katalog materijala i DF Servis</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
         /* Ispisuje se isključivo Obračun materijala, ne katalog ili zaglavlje. */
@@ -240,8 +240,42 @@ body.df-app {font-family:'DM Sans',system-ui,sans-serif!important;background:var
 @media(min-width:1000px){.df-app table:has(#materialsBody){min-width:1080px}.df-app table:has(#materialsBody) th:nth-child(4){min-width:210px}}
 @media(max-width:700px){.df-app .df-variant-select{min-width:180px}}
 </style>
+<style id="df-unified-style">
+
+/* DF — jedinstveni preklopnik Katalog / Servis (ne mijenja originalnu funkcionalnost) */
+#df-unified-switch { position: sticky; top: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; min-height: 58px; margin: 0 0 10px; padding: 8px 12px; border: 1px solid #1f3249; border-radius: 15px; background: #0c1d33; box-shadow: 0 10px 26px rgba(0,0,0,.12); font-family: system-ui, -apple-system, Segoe UI, sans-serif; }
+#df-unified-switch .df-unified-inner { width: 100%; max-width: 1150px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+#df-unified-switch .df-unified-brand { display: inline-flex; align-items: center; gap: 9px; color: #ecf5ff; letter-spacing: .02em; font-size: 14px; font-weight: 850; white-space: nowrap; }
+#df-unified-switch .df-unified-monogram { display: inline-grid; place-items:center; width: 31px; height: 31px; border: 1px solid #43e2c4; border-radius: 9px; background: #153c46; color: #8bf4db; font-size: 12px; }
+#df-unified-switch .df-unified-links { display: inline-flex; gap: 5px; padding: 4px; border: 1px solid #324a60; border-radius: 12px; background: #182b42; }
+#df-unified-switch .df-unified-link { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 8px 15px; border: 0; border-radius: 9px; min-height: 34px; font-size: 13px; font-weight: 750; line-height: 1.1; letter-spacing: 0; text-decoration: none; color: #c4d5e7; background: transparent; white-space: nowrap; transition: background-color .16s ease, color .16s ease; }
+#df-unified-switch .df-unified-link:hover { background: #28435f; color: white; text-decoration: none; }
+#df-unified-switch .df-unified-link[aria-current=page] { color: #0e2734; background: #79edcf; box-shadow: 0 2px 10px rgba(80,240,198,.15); }
+#df-unified-switch .df-unified-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media screen and (min-width: 1041px) { .df-app .df-sidebar { top: 68px !important; height: calc(100vh - 68px) !important; min-height: 0 !important; } }
+@media screen and (max-width: 540px) {
+ #df-unified-switch { padding: 7px; margin-bottom: 9px; border-radius: 12px; }
+ #df-unified-switch .df-unified-brand { font-size: 0; gap: 0; }
+ #df-unified-switch .df-unified-monogram { font-size: 12px; }
+ #df-unified-switch .df-unified-inner { gap: 8px; }
+ #df-unified-switch .df-unified-links { flex: 1 1 auto; display: flex; }
+ #df-unified-switch .df-unified-link { flex: 1 1 0; padding: 9px 7px; font-size: 11.5px; }
+}
+@media print { #df-unified-switch { display: none !important; } }
+
+</style>
 </head>
 <body class="df-app bg-gradient-to-br from-slate-100 to-slate-200 text-slate-800 p-2 sm:p-6 min-h-screen font-sans">
+<nav id="df-unified-switch" aria-label="Prelazak između kataloga materijala i servisa">
+  <div class="df-unified-inner">
+    <div class="df-unified-brand"><span class="df-unified-monogram">DF</span><span>DF INSTALACIJE</span></div>
+    <div class="df-unified-links">
+      <a class="df-unified-link" href="./" aria-current="page">▤ Katalog materijala</a>
+      <a class="df-unified-link" href="servis/" >⚙ Servis bojlera</a>
+    </div>
+  </div>
+</nav>
+
 <div class="df-shell"><aside aria-label="Navigacija katalogom" class="df-sidebar no-print">
 <div class="df-side-brand"><div class="df-brand-image"><img alt="DF Instalacije" src="df_logo.png"/></div><div class="df-side-brand-copy"><strong>DF / INSTALACIJE</strong><small>KATALOG I TROŠKOVNIK</small></div></div>
 <div class="df-side-separator"></div>
