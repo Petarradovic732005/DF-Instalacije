@@ -1,0 +1,3 @@
+// ZAMIJENI samo ovaj URL nakon što objaviš Cloudflare Worker.
+// Primjer: https://df-servis-api.tvoj-racun.workers.dev
+window.DF_API_URL = 'https://OVDJE-TVOJA-WORKER-ADRESA.workers.dev';

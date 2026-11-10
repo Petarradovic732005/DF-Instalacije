@@ -1,0 +1,44 @@
+DF INSTALACIJE + DF SERVIS — CIJELI PAKET ZA GITHUB PAGES
+========================================================
+
+OVAJ ZIP JE SLOZEN BEZ PODMAPA, zato nece nastati problem "404" zbog
+neprenesene mape servis. NE PRENOSI SAM ZIP NA GITHUB!
+
+KORACI OBJAVE
+1) Preuzmi ovaj ZIP i raspakiraj ga (Extract All / Izdvoji sve).
+2) Otvori mapu s raspakiranim datotekama. U njoj mora biti index.html I servis.html.
+3) Otvori GitHub repozitorij koji objavljuje tvoj katalog.
+4) U glavnoj mapi repozitorija klikni Add file > Upload files.
+5) Oznaci SVE datoteke iz raspakirane mape (Ctrl+A) i povuci ih
+   u Githubov prozor za prijenos. Sve trebaju stajati na ISTOJ razini.
+   Ne smije nastati dodatna mapa s nazivom ZIP-a.
+6) Klikni Commit changes.
+7) U Settings > Pages provjeri Branch (main/master), Folder /(root).
+8) Nakon objave osvjezi preglednik (Ctrl+F5).
+
+ADRESE (ako je tvoj repozitorij username.github.io)
+Katalog:  https://materijali-df.github.io/
+Servis:   https://materijali-df.github.io/servis.html
+Na obima stranicama je izbornik KATALOG | SERVIS.
+
+PROVJERI NA GITHUBU
+  index.html      <- glavni katalog
+  servis.html     <- servis (BEZ podmape!)
+  app.js, data.js, style.css, ...
+  config.js       <- postavke zajednicke baze
+  df_logo.png     <- logo
+
+ONLINE NALOZI - POSEBAN KORAK
+Katalog, modeli bojlera, greske i prirucnici rade kao staticni GitHub Pages.
+Da bi svi uredaji vidjeli iste NALOGE, moras prvo objaviti Cloudflare Worker
+s D1 bazom iz starijeg paketa DF SERVIS 2.5 i promijeniti u ovoj mapi:
+  config.js: window.DF_API_URL = 'https://tvoj-worker.workers.dev';
+Dok ga ne povezes, servis radi, ali prijava/spremanje zajednickih naloga ne rade.
+Nemoj stavljati ACCESS_PIN ili SESSION_SECRET u javne GitHub datoteke!
+Sifra 0909 nije sigurna za osobne podatke klijenata; postavi dugu jaku sifru
+na Cloudflare Worker prije spremanja stvarnih klijenata.
+
+NAPOMENA
+Izmjene DF Servis 2.4 koje si odbacio NISU ukljucene: servis je izveden iz
+2.3 + online nalozi 2.5, kao i prethodni spojeni paket.
+Postojece lokalne naloge i kataloge nemoj brisati dok ne provjeris novu stranicu.

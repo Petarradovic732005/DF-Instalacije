@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#071322" />
+  <meta name="description" content="DF Servis – terenski pomoćnik za bojlere i dizalice topline: kodovi grešaka, tehnička dokumentacija, servisni nalozi i katalog modela." />
+  <title>DF Servis | DF Instalacije</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+<style id="df-unified-style">
+
+/* DF — jedinstveni preklopnik Katalog / Servis (ne mijenja originalnu funkcionalnost) */
+#df-unified-switch { position: sticky; top: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; min-height: 58px; margin: 0 0 10px; padding: 8px 12px; border: 1px solid #1f3249; border-radius: 15px; background: #0c1d33; box-shadow: 0 10px 26px rgba(0,0,0,.12); font-family: system-ui, -apple-system, Segoe UI, sans-serif; }
+#df-unified-switch .df-unified-inner { width: 100%; max-width: 1150px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+#df-unified-switch .df-unified-brand { display: inline-flex; align-items: center; gap: 9px; color: #ecf5ff; letter-spacing: .02em; font-size: 14px; font-weight: 850; white-space: nowrap; }
+#df-unified-switch .df-unified-monogram { display: inline-grid; place-items:center; width: 31px; height: 31px; border: 1px solid #43e2c4; border-radius: 9px; background: #153c46; color: #8bf4db; font-size: 12px; }
+#df-unified-switch .df-unified-links { display: inline-flex; gap: 5px; padding: 4px; border: 1px solid #324a60; border-radius: 12px; background: #182b42; }
+#df-unified-switch .df-unified-link { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 8px 15px; border: 0; border-radius: 9px; min-height: 34px; font-size: 13px; font-weight: 750; line-height: 1.1; letter-spacing: 0; text-decoration: none; color: #c4d5e7; background: transparent; white-space: nowrap; transition: background-color .16s ease, color .16s ease; }
+#df-unified-switch .df-unified-link:hover { background: #28435f; color: white; text-decoration: none; }
+#df-unified-switch .df-unified-link[aria-current=page] { color: #0e2734; background: #79edcf; box-shadow: 0 2px 10px rgba(80,240,198,.15); }
+#df-unified-switch .df-unified-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media screen and (min-width: 1041px) { .df-app .df-sidebar { top: 68px !important; height: calc(100vh - 68px) !important; min-height: 0 !important; } }
+@media screen and (max-width: 540px) {
+ #df-unified-switch { padding: 7px; margin-bottom: 9px; border-radius: 12px; }
+ #df-unified-switch .df-unified-brand { font-size: 0; gap: 0; }
+ #df-unified-switch .df-unified-monogram { font-size: 12px; }
+ #df-unified-switch .df-unified-inner { gap: 8px; }
+ #df-unified-switch .df-unified-links { flex: 1 1 auto; display: flex; }
+ #df-unified-switch .df-unified-link { flex: 1 1 0; padding: 9px 7px; font-size: 11.5px; }
+}
+@media print { #df-unified-switch { display: none !important; } }
+
+
+/* Sticky service header stays below the shared switch. */
+body > .simple-top { top: 0 !important; }
+#df-unified-switch { margin-bottom: 0; border-radius: 0; }
+@media screen and (min-width: 701px) { .sidebar { top: 58px !important; height: calc(100vh - 58px) !important; } }
+
+</style>
+</head>
+<body>
+<nav id="df-unified-switch" aria-label="Prelazak između kataloga materijala i servisa">
+  <div class="df-unified-inner">
+    <div class="df-unified-brand"><span class="df-unified-monogram">DF</span><span>DF INSTALACIJE</span></div>
+    <div class="df-unified-links">
+      <a class="df-unified-link" href="./" >▤ Katalog materijala</a>
+      <a class="df-unified-link" href="./servis.html" aria-current="page">⚙ Servis bojlera</a>
+    </div>
+  </div>
+</nav>
+<header class="simple-top">
+  <div class="simple-top-inner">
+    <div class="simple-logo"><span class="simple-mark">DF</span><div><b>DF SERVIS</b><small>Brzi servisni vodič</small></div></div>
+    <nav class="simple-nav" aria-label="Izbornik">
+      <button class="nav-item active" data-view="diagnostics">🔧 Bojleri</button>
+      <button class="nav-item" data-view="jobs">📋 Nalozi</button>
+      <button class="nav-item" data-view="catalog">＋ Dodaj</button>
+      <button class="nav-item" data-view="documents">📖 Upute</button>
+    </nav>
+  </div>
+</header>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand-logo" href="#" aria-label="DF Servis – početna"><span class="brand-mark">D<span>F</span></span><span><strong>DF SERVIS</strong><small>TEHNIČKI ASISTENT</small></span></a>
+    <div class="sidebar-heading">RADNI PROSTOR</div>
+    <nav class="nav-links" aria-label="Glavna navigacija">
+      <button class="nav-item active" data-view="diagnostics"><span class="nav-icon">⌕</span> Dijagnostika <span class="nav-chev">›</span></button>
+      <button class="nav-item" data-view="documents"><span class="nav-icon">▤</span> Sheme i priručnici <span class="nav-chev">›</span></button>
+      <button class="nav-item" data-view="jobs"><span class="nav-icon">▣</span> Servisni nalozi <span class="nav-chev">›</span></button>
+      <button class="nav-item" data-view="catalog"><span class="nav-icon">▦</span> Baza modela <span class="nav-chev">›</span></button>
+    </nav>
+    <div class="sidebar-heading m-top">PROIZVOĐAČI</div>
+    <div class="brand-buttons" id="brandButtons"></div>
+    <div class="sidebar-bottom"><div class="online-chip"><span class="live-dot"></span> Zajednički nalozi</div><small>Online nalozi dostupni su nakon prijave šifrom na svim uređajima.</small></div>
+  </aside>
+  <div class="main-container">
+    <header class="topbar"><div class="topbar-left"><button class="mobile-menu" id="menuToggle" aria-label="Otvori izbornik">☰</button><div class="breadcrumbs">RADNI PROSTOR <span>/</span> <strong id="breadcrumbView">Dijagnostika</strong></div></div><div class="topbar-right"><span class="top-pill">HR · EUR</span><span class="current-date" id="todayText"></span></div></header>
+    <main class="content">
+      <section class="view active" id="view-diagnostics">
+        <div class="hero"><div class="hero-copy"><div class="eyebrow"><span class="small-line"></span> DIGITALNI SERVISNI ALAT</div><h1>Odaberi bojler.<br/><em>Otvori shemu.</em></h1><p>Marka → vrsta → model → spajanje termostata, električna shema i greške.</p><div class="hero-badges"><span>◉ 5 proizvođača</span><span>▧ Katalog modela</span><span>✓ Izvori označeni</span></div></div><div class="hero-art" aria-hidden="true"><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div><div class="art-center"><span>DF</span><small>PRO</small></div><div class="art-glow"></div></div></div>
+        <div class="stats-grid"><div class="stat-card"><div class="stat-symbol">▦</div><strong id="statModels">0</strong><span>Upisanih modela i varijanti</span></div><div class="stat-card"><div class="stat-symbol">⚡</div><strong id="statFaults">0</strong><span>Provjerenih zapisa o greškama</span></div><div class="stat-card"><div class="stat-symbol">▤</div><strong id="statJobs">0</strong><span>Sačuvanih servisnih naloga</span></div></div>
+        <div class="panel"><div class="panel-heading"><div><div class="section-kicker">IZABERI UREĐAJ</div><h2>Koji bojler servisiraš?</h2><p class="panel-subtitle">Pogledaj tipsku naljepnicu — oznaka modela važnija je od komercijalnog naziva.</p></div><span class="panel-tag">KORAK 1</span></div><div class="selector-grid"><label>Proizvođač<select id="brandSelect" aria-label="Proizvođač"></select></label><label>Vrsta uređaja<select id="typeSelect" aria-label="Vrsta uređaja"><option value="all">Svi uređaji</option><option value="condensing">Kondenzacijski</option><option value="atmospheric">Atmosferski</option><option value="turbo">Turbo bojleri</option><option value="heatpump">Dizalice topline</option></select></label><label>Serija / obitelj<select id="familySelect" aria-label="Serija"></select></label><label>Točan model / varijanta<select id="modelSelect" aria-label="Model"></select></label></div><div class="device-preview" id="devicePreview"></div><div id="quickSchema" class="quick-schema" aria-live="polite"></div></div>
+        <div class="panel fault-panel"><div class="panel-heading"><div><div class="section-kicker">GREŠKE I UZROCI</div><h2>Kodovi grešaka</h2><p class="panel-subtitle">Prikazuju se samo kodovi povezani s izabranom serijom i navedenim izvorom.</p></div><span class="count-pill" id="faultCount">0 KODOVA</span></div><div class="search-wrap"><span class="search-icon">⌕</span><input id="faultSearch" type="search" placeholder="Upiši grešku – npr. F.28, F.65, 501, 7H-01" autocomplete="off"/><button id="clearFaultSearch" class="clear-btn" aria-label="Očisti pretragu">×</button></div><div id="faultList" class="fault-list"></div></div>
+      </section>
+      <section class="view" id="view-documents"><div class="page-intro"><div class="section-kicker">TEHNIČKA BIBLIOTEKA</div><h1>Sheme i <em>priručnici.</em></h1><p>Izravni pristup službenim uputama za instalaciju, električno spajanje, regulaciju i hidrauličke sheme. Dokument mora odgovarati oznaci i reviziji uređaja.</p></div><div class="panel"><div class="panel-heading"><div><h2>Odabrani uređaj</h2><p class="panel-subtitle" id="docsCurrent"></p></div><button class="subtle-btn" data-goto="diagnostics">Promijeni model ↗</button></div><div class="notice warning"><strong>Važno za električne spojeve</strong><span>Ne prikazujemo izmišljene kleme ni univerzalne sheme. Položaji priključaka za termostat (ON/OFF, eBUS, EMS, BUS itd.) ovise o konkretnoj elektronici, reviziji i regulatoru. Koristi shemu iz službenog instalacijskog priručnika i provjeri napajanje prije rada. Rad na plinskim i rashladnim sustavima zahtijeva odgovarajuća ovlaštenja.</span></div><div id="docsQuickSchema" class="quick-schema"></div><div class="doc-grid" id="docsList"></div></div><div class="panel"><div class="section-kicker">PRAVILAN REDOSLIJED</div><h2>Kako pronaći točnu shemu?</h2><div class="steps"><div><span>01</span><strong>Prepiši oznaku</strong><p>Pogledaj tipsku pločicu, uključujući sufiks modela i oznaku unutarnje/vanjske jedinice.</p></div><div><span>02</span><strong>Otvori instalacijski priručnik</strong><p>U PDF-u traži poglavlja „Electrical installation”, „Električna instalacija”, „Wiring diagram” ili „Regulacija”.</p></div><div><span>03</span><strong>Provjeri regulator</strong><p>Potvrdi podržava li uređaj kontaktni ili komunikacijski termostat i treba li modul/proširenje.</p></div></div></div></section>
+      <section class="view" id="view-jobs"><div class="page-intro"><div class="section-kicker">SERVISNI DNEVNIK</div><h1>Svaki servis, <em>pod kontrolom.</em></h1><p>Evidentiraj klijente, serijske brojeve, kodove kvarova, radove i datume. Nalozi se spremaju u zajedničku online bazu. Svi uređaji prijavljeni šifrom vide iste naloge.</p></div><div class="cloud-gate panel" id="cloudGate">
+   <div class="cloud-gate-icon">🔒</div><h2>Prijava u servisne naloge</h2>
+   <p id="cloudStatus">Za pristup zajedničkim nalozima potrebna je šifra.</p>
+   <div id="cloudSetup" hidden><strong>Potrebno je povezati bazu</strong><p>Prvo postavi svoj Cloudflare Worker i upiši njegov URL u <code>config.js</code>. Upute su u ZIP-u.</p></div>
+   <form id="cloudLogin" class="cloud-login" autocomplete="off"><label for="cloudPin">Šifra za pristup nalozima</label><div class="cloud-login-line"><input id="cloudPin" type="password" inputmode="numeric" autocomplete="off" placeholder="Upiši šifru" minlength="4" maxlength="100" required/><button id="cloudLoginBtn" type="submit" class="primary-btn">Otključaj naloge</button></div><span id="cloudLoginError" class="cloud-error" role="alert"></span></form>
+   <p class="cloud-security">Kodovi grešaka i sheme dostupni su bez prijave. Za radne naloge potrebna je šifra. Četveroznamenkasta šifra nije jaka zaštita osobnih podataka.</p>
+  </div>
+  <div class="cloud-tools panel" id="cloudTools" hidden><div><strong>☁ Zajednički servisni nalozi</strong><small id="cloudSyncedAt">Online baza</small></div><div class="cloud-actions"><button type="button" id="cloudRefresh" class="subtle-btn">↻ Osvježi</button><button type="button" id="importLocalJobs" class="subtle-btn">↑ Prenesi stare naloge (<span id="legacyCount">0</span>)</button><button type="button" id="cloudLogout" class="subtle-btn">Odjavi se</button></div></div>
+  <div class="jobs-layout" id="jobsLayout" hidden><div class="panel"><div class="panel-heading"><div><h2 id="jobFormTitle">Novi servisni nalog</h2><p class="panel-subtitle">Polja označena zvjezdicom su obavezna.</p></div></div><form id="jobForm"><input type="hidden" id="jobEditId"/><input type="hidden" id="jobOriginalVersion"/><div class="form-grid"><label>Ime klijenta *<input id="jobClient" required placeholder="Ime i prezime / tvrtka"/></label><label>Telefon<input id="jobPhone" placeholder="Kontakt broj" inputmode="tel"/></label><label class="full">Adresa objekta<input id="jobAddress" placeholder="Ulica, mjesto"/></label><label>Datum servisa *<input id="jobDate" type="date" required/></label><label>Status<select id="jobStatus"><option value="Završeno">Završeno</option><option value="U tijeku">U tijeku</option><option value="Čeka dijelove">Čeka dijelove</option></select></label><label class="full">Uređaj / model *<input id="jobModel" required placeholder="npr. Vaillant ecoTEC plus VUW..."/></label><label>Serijski broj<input id="jobSerial" placeholder="Serijski broj"/></label><label>Kod greške<input id="jobError" placeholder="npr. F.028"/></label><label class="full">Simptomi i uzrok<textarea id="jobProblem" rows="2" placeholder="Opis problema, očitanja..."></textarea></label><label class="full">Izvedeni radovi / ugrađeni dijelovi<textarea id="jobWork" rows="3" placeholder="Pregled, mjerenja, zamjene..."></textarea></label><label>Iznos (€)<input id="jobAmount" type="number" min="0" step="0.01" placeholder="0,00"/></label><label>Sljedeći servis<input id="jobNext" type="date"/></label></div><div class="form-actions"><button type="submit" class="primary-btn" id="jobSaveBtn">+ Spremi nalog</button><button type="button" id="jobReset" class="subtle-btn">Očisti polja</button></div></form></div><div class="panel saved-panel"><div class="panel-heading"><div><h2>Spremljeni nalozi</h2><p class="panel-subtitle">Svi prijavljeni uređaji vide zajedničke podatke. Osvježavanje svakih 30 sekundi.</p></div><span class="count-pill" id="jobCountPill">0</span></div><div class="compact-search"><input id="jobSearch" type="search" placeholder="Traži klijenta, model ili adresu..." /></div><div id="jobsList" class="jobs-list"></div><div class="export-actions"><button id="exportJobs" class="subtle-btn">↓ Sigurnosna kopija JSON</button><button id="exportCsv" class="subtle-btn">↓ Izvezi CSV</button><label class="subtle-btn import-label">↑ Uvezi JSON <input type="file" id="importJobs" accept="application/json,.json" hidden /></label></div></div></div></section>
+      <section class="view" id="view-catalog"><div class="page-intro"><div class="section-kicker">BAZA UREĐAJA</div><h1>Katalog koji <em>raste s tobom.</em></h1><p>Uključuje početni skup modela i provjerene poveznice na dokumentaciju. Dodaj vlastite modele i kodove grešaka iz točnog servisnog priručnika.</p></div><div class="panel"><div class="panel-heading"><div><h2>Pretraga kataloga</h2><p class="panel-subtitle" id="catalogCountText"></p></div></div><div class="search-wrap"><span class="search-icon">⌕</span><input id="catalogSearch" type="search" placeholder="Traži proizvođača, seriju ili oznaku modela..."/></div><div id="catalogList" class="catalog-list"></div></div><div class="panel"><div class="panel-heading"><div><h2>Dodaj model u katalog</h2><p class="panel-subtitle">Vlastiti unosi dostupni su samo na ovom uređaju dok ne izvezeš kopiju.</p></div></div><form id="addModelForm" class="form-grid"><label>Proizvođač<select id="newBrand" required><option>Vaillant</option><option>Bosch</option><option>Daikin</option><option>Ariston</option><option>Viessmann</option></select></label><label>Vrsta bojlera / uređaja<select id="newCategory"><option value="condensing">Kondenzacijski</option><option value="atmospheric">Atmosferski</option><option value="turbo">Turbo</option><option value="heatpump">Dizalica topline</option></select></label><label>Serija / obitelj *<input id="newFamily" required placeholder="npr. ecoTEC plus"/></label><label>Točan model *<input id="newVariant" required placeholder="npr. VUW 25/32..."/></label><label class="full">Poveznica na službene upute (https://...)<input type="url" id="newDoc" placeholder="https://..."/></label><div class="full form-actions"><button type="submit" class="primary-btn">+ Dodaj model</button></div></form><div class="divider-line"></div><div class="section-kicker">DODAVANJE KODA GREŠKE</div><p class="helper">Kod se povezuje s vlastitom serijom. Obavezno dodaj izvor iz kojeg je prepisan.</p><form id="addFaultForm" class="form-grid"><label>Serija<select id="faultFamily" required></select></label><label>Kod *<input id="newFaultCode" required placeholder="npr. F.123" /></label><label class="full">Značenje *<input id="newFaultTitle" required placeholder="Opis sa servisnog priručnika"/></label><label class="full">Mogući uzroci<textarea id="newFaultCauses" rows="2" placeholder="Jedan uzrok po retku"></textarea></label><label class="full">Sigurne provjere / napomene<textarea id="newFaultChecks" rows="2" placeholder="Jedna napomena po retku"></textarea></label><label class="full">Izvor (URL) *<input id="newFaultSource" required type="url" placeholder="https://službeni-priručnik..."/></label><div class="full form-actions"><button type="submit" class="primary-btn">+ Dodaj kod</button></div></form><div class="divider-line"></div><div class="export-actions"><button class="subtle-btn" id="exportCatalog">↓ Izvezi vlastitu bazu</button><label class="subtle-btn import-label">↑ Uvezi vlastitu bazu <input type="file" id="importCatalog" accept=".json,application/json" hidden /></label></div></div></section>
+    </main>
+    <footer class="footer"><span>© <span id="year"></span> DF SERVIS · Terenski pomoćnik</span><span>Podaci iz priručnika imaju prednost nad ovim sažecima. Nije zamjena za stručno osposobljavanje.</span></footer>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script><script src="wiring-data.js"></script><script src="catalog-additions.js"></script><script src="thermostat-data.js"></script><script src="viessmann-data.js"></script><script src="config.js"></script><script src="shared-api.js"></script><script src="app.js"></script>
+</body>
+</html>
